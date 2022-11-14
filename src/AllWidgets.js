@@ -11,7 +11,7 @@ class PassportImage extends React.Component {
                 style={{
                     justifyContent: this.props.MyContent,
                     height: 200,
-                    width: "100%",
+                    width: "90px",
                     padding: 10,
                     border: '2px solid #000000'
                 }}></img>
