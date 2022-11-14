@@ -1,0 +1,92 @@
+.calculator{
+border-radius: 2px;
+padding: 10x;
+width: 400x;
+height: 400x;
+font-size: medium;
+margin: 10x;
+border: 10px;
+display: flex;
+flex-direction:row ;
+
+}
+.display-box{
+font: 100;
+background-color: black;
+border: solid black 2px;
+border-radius:10px ;
+width: 100%;
+height: 65%;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+/* 
+input[type=button]{
+background-color: white;
+border: solid black 2px;
+width: 35px;
+height: 20px;
+margin: 1emc;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+} */
+
+.Myadd{
+display: flex;
+flex-direction: column;
+}
+.chrono{
+
+    display: flex;
+    flex-direction: column;
+    
+}
+    
+
+.me{
+
+    display: flex;
+    flex-direction: column;
+      
+}
+.you{
+
+    display: flex;
+    flex-direction: row;
+      
+}
+
+
+/**Calculator Style Starts here*/
+.btns
+{
+    display: flex;
+    border:2px solid orange;   
+    width:150px;
+    background: #000000;
+}
+.btns-main{
+    display:flex;
+    flex-wrap: wrap;
+    /* width:200px; */
+    /* border:2px solid red; */
+}
+.btns-operators
+{
+    display: flex;
+    flex-direction: column;
+    /* border:2px solid green; */
+}
+
+.cbtn{
+    height:35px;
+    width:35px;
+    text-align: center;
+    /* display: block; */
+    /* padding:5px; */
+}
+
+
+/**Calculator Style Ends here*/

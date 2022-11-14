@@ -1,0 +1,14 @@
+ .sub-head {
+     display: flex;
+     justify-content: end;
+     margin: 10px;
+
+ }
+
+ .intro {
+     display: flex;
+     height: 70vh;
+     width: 10vw;
+     padding: 20px;
+
+ }

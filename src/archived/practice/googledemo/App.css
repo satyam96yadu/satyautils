@@ -1,0 +1,38 @@
+.image{
+display: flex;
+
+height: 30vh;
+
+}
+.texttop{
+
+text-align: center;
+}
+.textlogo{
+    display: flex;
+height: 50vh;
+background-color: white;
+justify-content: center;
+margin: 10px; ;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
