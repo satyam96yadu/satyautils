@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { PassportImage, MyList, MyComputer, BallGame, EventHandlingDemo, MyLogic } from './AllWidgets';
+import { PassportImage, MyList, MyComputer, BallGame, EventHandlingDemo, MyCalculator } from './AllWidgets';
 
 import './App.css';
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
             <BallGame />*/}
 
 
-            <MyLogic />
+            <MyCalculator />
 
         </div>)
 

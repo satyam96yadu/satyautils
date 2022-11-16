@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 class PassportImage extends React.Component {
@@ -238,95 +238,52 @@ class BallGame extends React.Component {
 
 }
 
+class MyCalculator extends React.Component {
+    state = {
+        consoleInput: 0
+    }
 
-class MyLogic extends React.Component {
+    clickHandler = (event) => {
+        
+        this.setState({ consoleInput: event.target.value });
+        
 
+    }
+    clearDisplay = () => {
 
-
+    }
     render() {
 
         return (<div>
 
             <div class="btns">
 
-            
-            <div className="btns-main">
-                <input type="button" value="1" className="cbtn"/>
-                <input type="button" value="2"  className="cbtn"/>
-                <input type="button" value="3"  className="cbtn"/>
-                <input type="button" value="4"  className="cbtn"/>
-                <input type="button" value="5"  className="cbtn"/>
-                <input type="button" value="6"  className="cbtn"/>
-                <input type="button" value="7"  className="cbtn"/>
-                <input type="button" value="8"  className="cbtn"/>
-                <input type="button" value="9"  className="cbtn"/>
-                <input type="button" value="."  className="cbtn"/>
-                <input type="button" value="0"  className="cbtn"/>
-                <input type="button" value="="  className="cbtn"/>
+                <div className="btns-main">
+
+                    <input type="text" value={this.state.consoleInput} className="answer" disabled />
+                    <input type="button" value="1" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="2" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="3" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="4" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="5" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="6" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="7" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="8" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="9" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="." className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="0" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="=" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="clear" className="cbtn" onClick={this.clearDisplay} />
+                    <input type="button" value="/" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="*" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="-" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="+" className="cbtn" onClick={this.clickHandler} />
+
+                </div>
+
+
             </div>
-            <div className="btns-operators">
-                <input type="button" value="/"  className="cbtn"/>
-                <input type="button" value="*"  className="cbtn"/>
-                <input type="button" value="-"  className="cbtn"/>
-                <input type="button" value="+"  className="cbtn"/>
-            </div>
 
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* <div class="calculator">
-                <div class="you">
-                <div><input type="button" value="AC" onClick={"AC"} /></div>
-                <div><input type="button" value="@" onClick={"@"} /></div>
-                <div><input type="button" value="%" onClick={"%"} /></div>
-                <div><input type="button" value="÷" onClick={"÷"} /></div>
-                </div>
-                <div className="Myadd">
-                    
-                    <div><input type="button" value="1" onClick={"1"} /></div>
-                    <div><input type="button" value="4" onClick={"4"} /></div>
-                    <div><input type="button" value="7" onClick={"7"} /></div>
-                    <div><input type="button" value="." onClick={"."} /></div>
-                    
-                </div>
-                <div class="chrono">
-                    <div><input type="button" value="2" onClick={"2"} /></div>
-                    <div><input type="button" value="5" onClick={"5"} /></div>
-                    <div><input type="button" value="8" onClick={"8"} /></div>
-                    <div><input type="button" value="0" onClick={"0"} /></div>
-                </div>
-                <div class="yup">
-                <div><input type="button" value="3" onClick={"3"} /></div>
-                <div><input type="button" value="6" onClick={"6"} /></div>
-                <div><input type="button" value="9" onClick={"9"} /></div>
-                    <div><input type="button" value="" onClick={""} /></div>
-                    
-                </div>
-                <div class="me">
-                    <div><input type="button" value="-" onClick={"-"} /></div>
-                    <td><input type="button" value="×" onClick={"×"} /></td>
-                    <td><input type="button" value="+" onClick={"+"} /></td>
-
-                    <td><input type="button" value="=" onClick={("=")} /></td>
-                </div>
-
-            </div> */}
         </div>)
     }
 
@@ -427,4 +384,4 @@ class EventHandlingDemo extends React.Component {
     }
 }
 
-export { PassportImage, MyList, MyComputer, BallGame, EventHandlingDemo, MyLogic };
+export { PassportImage, MyList, MyComputer, BallGame, EventHandlingDemo, MyCalculator };
