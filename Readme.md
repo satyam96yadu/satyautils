@@ -41,4 +41,10 @@ git push origin main
 
 <When asks for password:123456>
 
- 
+
+
+npm run build
+
+
+
+firebase deploy 

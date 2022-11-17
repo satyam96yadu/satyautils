@@ -306,7 +306,7 @@ class MyCalculator extends React.Component {
                     <input type="button" value="." className="cbtn" onClick={this.clickHandler} />
                     <input type="button" value="0" className="cbtn" onClick={this.clickHandler} />
                     <input type="button" value="=" className="cbtn" onClick={this.onClickEqual} />
-                    <input type="button" value="clr" className="cbtn" onClick={this.clearDisplay} />
+                    <input type="button" value="CLR" className="cbtn" onClick={this.clearDisplay} />
                     <input type="button" value="/" className="cbtn" onClick={this.onClickOp} />
                     <input type="button" value="*" className="cbtn" onClick={this.onClickOp} />
                     <input type="button" value="-" className="cbtn" onClick={this.onClickOp} />
