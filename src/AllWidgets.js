@@ -240,17 +240,50 @@ class BallGame extends React.Component {
 
 class MyCalculator extends React.Component {
     state = {
-        consoleInput: 0
+        consoleInput: 0, a: 0, b: 0, op: undefined
     }
 
     clickHandler = (event) => {
-        
-        this.setState({ consoleInput: event.target.value });
-        
+        let temp = (this.state.consoleInput * 10) + parseInt(event.target.value);
+        this.setState({ consoleInput: temp });
+
+    }
+    onClickOp = (event) => {
+        this.setState({ a: this.state.consoleInput, op: event.target.value });
+
+    }
+    onClickEqual = (event) => {
+
+        if (this.state.op) {
+            let a = this.state.a;
+            let b = parseInt(this.state.consoleInput);
+            let result = 0;
+
+            switch (this.state.op) {
+                case '+':
+                    result = a + b;
+                    break;
+
+                case '-':
+                    result = a - b;
+                    break;
+
+                case '/':
+                    result = a / b;
+                    break;
+
+                case '*':
+                    result = a * b;
+                    break;
+
+            }
+            this.setState({ consoleInput: result });
+
+        }
 
     }
     clearDisplay = () => {
-
+        this.setState({ consoleInput: 0 });
     }
     render() {
 
@@ -272,12 +305,12 @@ class MyCalculator extends React.Component {
                     <input type="button" value="9" className="cbtn" onClick={this.clickHandler} />
                     <input type="button" value="." className="cbtn" onClick={this.clickHandler} />
                     <input type="button" value="0" className="cbtn" onClick={this.clickHandler} />
-                    <input type="button" value="=" className="cbtn" onClick={this.clickHandler} />
-                    <input type="button" value="clear" className="cbtn" onClick={this.clearDisplay} />
-                    <input type="button" value="/" className="cbtn" onClick={this.clickHandler} />
-                    <input type="button" value="*" className="cbtn" onClick={this.clickHandler} />
-                    <input type="button" value="-" className="cbtn" onClick={this.clickHandler} />
-                    <input type="button" value="+" className="cbtn" onClick={this.clickHandler} />
+                    <input type="button" value="=" className="cbtn" onClick={this.onClickEqual} />
+                    <input type="button" value="clr" className="cbtn" onClick={this.clearDisplay} />
+                    <input type="button" value="/" className="cbtn" onClick={this.onClickOp} />
+                    <input type="button" value="*" className="cbtn" onClick={this.onClickOp} />
+                    <input type="button" value="-" className="cbtn" onClick={this.onClickOp} />
+                    <input type="button" value="+" className="cbtn" onClick={this.onClickOp} />
 
                 </div>
 
