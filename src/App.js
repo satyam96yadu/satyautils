@@ -1,34 +1,40 @@
 import React, { Component } from "react";
-import { PassportImage, MyList, MyComputer, BallGame, EventHandlingDemo, MyCalculator } from './AllWidgets';
+import About from "./mycomponents/About";
+import Home from "./mycomponents/Home";
+import './style.css';
+import Header from "./mycomponents/Header";
+import {createBrowserRouter,RouterProvider} from 'react-router-dom';
 
-import './App.css';
+let router=createBrowserRouter([
+    {
+        path:"/",
+        element:<Home/>
+    },
+    {
+        path:"/About",
+        element:<About/>
+    },
+
+    {
+        path:"/Home",
+        element:<Home/>
+}
+]);
+
 class App extends Component {
     render() {
-        return (<div className="passport-image-container">
-
-
-            {/* <EventHandlingDemo/>
-
-        <PassportImage 
-        imgSrc='https://a-z-animals.com/media/tiger_laying_hero_background.jpg'
-        name="TIGER"
-        textalign="center"/>
-        
-<MyList items={[
-    {name:"Apple",price:100},
-    {name:"Mango",price:50},
-    {name:"Banana",price:60}
-    ]}/>
-
-<MyComputer/> 
-            <BallGame />*/}
-
-
-            <MyCalculator />
-
+        return(
+        <div style={{display:'flex',flexDirection:'column',width:"100%"}}>
+            <Header/>
+            <div style={{flex:1}}>
+                <RouterProvider router={router}/>
+            </div>
+      
         </div>)
-
     }
+   
 }
 
 export default App;
+    
+         
