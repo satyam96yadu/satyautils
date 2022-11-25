@@ -347,4 +347,4 @@ class EventHandlingDemo extends React.Component {
     }
 }
 
-export { PassportImage, MyList, BallGame, EventHandlingDemo, MyCalculator, };
+export { PassportImage, MyList, EventHandlingDemo, MyCalculator, };

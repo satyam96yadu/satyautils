@@ -6,7 +6,7 @@ import Header from "./mycomponents/Header";
 import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
 import Book from "./mycomponents/Book";
 import MyCalculator from "./mycomponents/Calculator/MyCalculator";
-
+import BallGame from "./mycomponents/BallGame/MyBallGame";
 
 
 
@@ -23,6 +23,7 @@ class App extends Component {
                   <Route path="/my-about" element={<About/>} />
                   <Route path="/demo" element={<h1>Hello</h1>} />
                   <Route path="/calculator" element={<MyCalculator/>} />
+                  <Route path="/BallGame" element={<BallGame/>} />
                   <Route path="/books/:bookId" element={<Book/>} {...this.props}/>
                   {/* <Navigate to="/"/> */}
                 </Routes>

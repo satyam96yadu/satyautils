@@ -17,7 +17,7 @@ return(<header class="text-gray-600 body-font">
     <NavLink to="/" className="mr-5 hover:text-gray-900">home</NavLink>
     <NavLink  to="/about" className="mr-5 hover:text-gray-900">About</NavLink>
     <NavLink  to="/calculator" className="mr-5 hover:text-gray-900">Calculator</NavLink>
-    <NavLink  to="/xyz" className="mr-5 hover:text-gray-900">contact</NavLink>
+    <NavLink  to="/BallGame" className="mr-5 hover:text-gray-900">BallGame</NavLink>
   </nav>
   <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Enroll Now
     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
