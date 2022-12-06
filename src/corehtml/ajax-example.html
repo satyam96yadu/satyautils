@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>API example</title>
+	</head>
+	<body>
+		<h1>Hello to REST API</h1>
+
+		<input type="number" id="recordId" placeholder="Enter ID"/>
+		<button type="button" onclick="loadData();">Get Data</button>
+
+		<table border="1px">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Gender</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="tableRows">
+				</tr>
+			</tbody>
+		</table>
+
+
+		<script>
+			
+
+			function loadData(){
+				var recordId=document.getElementById("recordId").value;
+				
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if(this.readyState==4&&this.status==200){
+						//var arr=JSON.parse(xhttp.responseText);
+						//console.log(arr[0]);
+						var obj=JSON.parse(xhttp.responseText);
+						console.log(obj);
+
+						var tableRows=document.getElementById("tableRows");
+						var htmlContent="<td>"+obj["id"]+"</td>";
+						htmlContent+="<td>"+obj["name"]+"</td>";
+						htmlContent+="<td>"+obj["email"]+"</td>";
+						htmlContent+="<td>"+obj["gender"]+"</td>";
+						htmlContent+="<td>"+obj["status"]+"</td>";
+						tableRows.innerHTML=htmlContent;
+
+					}
+					else{
+    						console.log("Please wait...");	
+					}
+				};
+				xhttp.open("GET", "https://gorest.co.in/public/v2/users/"+recordId, true);
+				xhttp.send();
+			}
+		</script>
+	</body>
+</html>

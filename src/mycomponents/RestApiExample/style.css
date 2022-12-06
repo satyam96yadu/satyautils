@@ -1,0 +1,50 @@
+form{
+    background-color: #CCCCCC;
+    width:300px;
+    padding:10px;
+    margin:10px;
+}
+form input[type='number']{
+    background: #FAFAFA;
+    margin-right:10px;
+}
+form button{
+    background:#000000;
+    color:#ffffff;
+    padding:5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px #FFFFFF;
+}
+table,tr,th,td{
+    border:1px solid #000000;
+    padding:10px;
+}
+table{
+    float:left;
+}
+
+/* ---------------------------------- */
+
+.popup-form{
+    background:rgba(0,0,0,0.5);
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-form form{
+    background:#FFFFFF;
+    width:300px;
+    height:300px;   
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-form form .gender-container{
+    display: flex;
+    align-items: center;
+}

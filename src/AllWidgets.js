@@ -119,11 +119,7 @@ class MyComputer extends React.Component {
     }
 
 
-
-
 }
-
-
 
 const BALL_COLORS = ["#ff0000", "#00ff00", "#fff000", "pink", "purple", "cyan"];
 
